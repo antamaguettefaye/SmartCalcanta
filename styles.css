@@ -461,7 +461,6 @@ body::before {
     flex-direction: column;
     transition: margin-left var(--transition-speed) ease, margin-right var(--transition-speed) ease;
     min-height: 100vh;
-    overflow: hidden;
 
 }
 
