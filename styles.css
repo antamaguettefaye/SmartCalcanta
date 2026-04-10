@@ -579,7 +579,7 @@ body::before {
     position: relative;
     box-shadow: inset 0 4px 16px rgba(0, 0, 0, .08), 0 4px 16px rgba(0, 0, 0, .05);
     backdrop-filter: blur(24px);
-    overflow: hidden;
+    overflow: auto;
 }
 
 .display::after {
@@ -1028,9 +1028,15 @@ body::before {
     }
     .app-body {
         margin-left: var(--sidebar-width);
+        
     }
 }
-
+@media (max-width: 480px) {
+    .calculator {
+        transform: scale(0.95);
+        transform-origin: top center;
+    }
+}
 @media (max-width: 767px) {
     .menu-toggle {
         display: flex;
@@ -1121,4 +1127,11 @@ button:active i {
 .control-btn:hover i,
 .theme-switcher:hover i {
     opacity: 1;
+}
+
+
+@media (max-width: 767px) {
+    .main-content {
+        justify-content: flex-start; /* au lieu de center */
+    }
 }
